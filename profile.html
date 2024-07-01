@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohan Sai's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Mohan Sai</h1>
+            <p>Python, Django, and Flask Developer</p>
+            <a href="#portfolio" class="btn">View Portfolio</a>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>My Work</h2>
+        <div class="portfolio-grid">
+          <div class="carousel">
+            <div class="carousel-slide">
+            <div class="portfolio-item">
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="images/one.jpg"></div>
+                  <div class="swiper-slide"><img src="images/two.jpg"></div>
+                  <div class="swiper-slide"><img src="images/three.jpg"</div>
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+                
+
+                <h3>Lawyer Booking Management System</h3>
+                <p>A Django-based Lawyer Booking management system for booking appointments with lawyers. Includes user registration, scheduling, and notifications.</p>
+                <a href="https://github.com/mohan1898/Lawyer-Booking-Management" target="_blank" class="btn">View on GitHub</a>
+              </div>
+            </div>
+            </div>
+            <div class="portfolio-item">
+              <div class="carousel">
+                <div class="carousel-slide">
+                  <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide"><img src="images/shop 1.jpg"></div>
+                      <div class="swiper-slide"><img src="images/shop 2.jpg"></div>
+                      <div class="swiper-slide"><img src="images/shop 3.jpg"></div>
+                      ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                
+                <h3>Online Shopping Store</h3>
+                <p>An Online Shopping platform built with Django. Features product listings, shopping cart,and order management.</p>
+                <a href="https://github.com/mohan1898/shopping_web_app" target="_blank" class="btn">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="images/IMG_20240622_144515.jpg" alt="Mohan Sai" class="about-img">
+        <p>MCA graduate skilled in Python, Django, and Flask. Passionate about building robust web applications and constantly learning new technologies.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form name="submit-to-google-sheet">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <span id="msg"></span>
+    </section>
+    <footer>
+        <p>&copy; 2024 Mohan Sai. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbye-AfrcObxTdSC6QlxrhZhdx7U9pZkU3R2WCKcHWNKgT2bibe4608ADGUyffSIhTfj/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg=document.getElementById("msg")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML="Message Sent Successfully"
+            setTimeout(function(){
+             msg.innerHTML="" 
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay:{
+            delay:3000,
+            disaableonInteraction:false,
+        },
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  
+});
+</script>
+</body>
+</html>
