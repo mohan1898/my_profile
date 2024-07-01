@@ -149,3 +149,14 @@ footer {
   position: fixed;
   z-index: 100;
 }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background: #333;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
