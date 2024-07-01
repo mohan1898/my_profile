@@ -25,7 +25,11 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Mohan Sai</h1>
-            <p>Python, Django, and Flask Developer</p>
+            <div id="preloader"></div>
+         <div class="autotext">
+       <h1>Hello !!<span class="auto-type"></span></h1>
+
+       </div>
             <a href="#portfolio" class="btn">View Portfolio</a>
         </div>
     </section>
@@ -155,6 +159,16 @@
   },
   
 });
+</script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed(".auto-type",{
+    strings:["My Portfolio","I am Mohan Sai"],
+    typeSpeed:150,
+    backSpeed:150,
+    loop:true
+  })
 </script>
 </body>
 </html>
