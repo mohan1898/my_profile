@@ -142,13 +142,16 @@ footer {
 }
 
 #preloader{
-    background:url("./images/lad.gif")
-   no-repeat center center;
-  height:100vh;
-  width:100%;
-  position: fixed;
-  z-index: 100;
+        background: #fff url(images/new.gif) no-repeat center center;
+        background-size: 12%;
+        height:100vh;
+        min-width: 100%;
+        position: fixed;
+        z-index:100;
 }
+
+
+
 ul {
     list-style-type: none;
     padding: 0;
